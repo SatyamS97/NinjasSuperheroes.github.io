@@ -25,8 +25,8 @@ search.onkeyup = function () {
   var searchname = search.value;
   if (searchname !== "") {
     fetch(
-      "https://superheroapi.com/api.php/ 3328323083897178/search/" +
-        searchname.trim()
+      'https://gateway.marvel.com:443/v1/public/characters?ts=<time-stamp>&apikey=<public-key>&hash=<md5(ts+privateKey+publicKey)>'
+
     )
       .then((response) => response.json())
       .then((data) => {
